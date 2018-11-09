@@ -14,6 +14,9 @@ $ git clone https://github.com/github/orchestrator.git
 The Dockerfile is in the root of the cloned orchestrator project:
 ```
 $ cd orchestrator
+```
+If you want to use *oraclelinux:7-slim* as OS instead of *alpine:3.6*, you can download [this Dockerfile](https://github.com/wagnerjfr/orchestrator-mysql-replication-docker/blob/master/Dockerfile) and replace by the existing one:
+```
 $ docker build -t orchestrator:latest .
 ```
 To check whether the image was built, run:
@@ -81,7 +84,8 @@ for N in 2 3
   docker exec -it node$N mysql -uroot -pmypass -e "START SLAVE;"
 done
 ```
-Checking whether slaves are ok:
+Checking whether slaves are replicating. ***Slave_IO_Running: Yes*** and ***Slave_SQL_Running: Yes***.
+:
 ```
 $ docker exec -it node2 mysql -uroot -pmypass -e "SHOW SLAVE STATUS\G"
 $ docker exec -it node3 mysql -uroot -pmypass -e "SHOW SLAVE STATUS\G"
