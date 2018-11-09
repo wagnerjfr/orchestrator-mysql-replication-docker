@@ -107,7 +107,7 @@ $ docker exec -it orchestrator ./orchestrator -c topology -i 172.20.0.11:3306
 ```
 You can also see it accessing: http://localhost:3000
 
-<image>
+![alt text](https://github.com/wagnerjfr/orchestrator-mysql-replication-docker/blob/master/orchestrator.png)
 
 ## 7- Clean up
 
