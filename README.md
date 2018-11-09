@@ -1,2 +1,2 @@
-# orchestrator-mysql-replication-docker
-Orchestrator and Replication topology using Docker containers
+# Orchestrator and Replication topology using Docker containers
+
