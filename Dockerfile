@@ -33,7 +33,7 @@ RUN rsync -av $(find /tmp/orchestrator-release -type d -name orchestrator -maxde
 RUN rsync -av $(find /tmp/orchestrator-release -type d -name orchestrator-cli -maxdepth 2)/ /
 RUN cp /usr/local/orchestrator/orchestrator-sample-sqlite.conf.json /etc/orchestrator.conf.json
 
-FROM oraclelinux:7.5
+FROM oraclelinux:7-slim
 
 EXPOSE 3000
 
