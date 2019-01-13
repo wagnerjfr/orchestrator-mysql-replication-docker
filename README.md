@@ -2,7 +2,7 @@
 
 ## 1- Cloning Orchestrator
 
-The link to Orchestrator project in GitHub is: https://github.com/github/orchestrator
+Link to the Orchestrator project in GitHub: https://github.com/github/orchestrator
 
 To clone the project run:
 ```
