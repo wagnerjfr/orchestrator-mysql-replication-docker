@@ -15,7 +15,7 @@ The Dockerfile is in the root of the cloned orchestrator project:
 ```
 $ cd orchestrator
 ```
-If you want to use *oraclelinux:7-slim* as OS instead of *alpine:3.6*, you can download [this Dockerfile](https://github.com/wagnerjfr/orchestrator-mysql-replication-docker/blob/master/Dockerfile) and replace by the existing one:
+If you want to use *oraclelinux:7-slim* as OS instead of *alpine:3.6*, you can download this [Dockerfile](https://github.com/wagnerjfr/orchestrator-mysql-replication-docker/blob/master/Dockerfile) and replace by the existing one:
 ```
 $ docker build -t orchestrator:latest .
 ```
