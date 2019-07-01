@@ -1,6 +1,6 @@
 # Orchestrator and Replication topology using Docker containers
 
-## 1- Cloning Orchestrator
+## 1. Cloning Orchestrator
 
 Link to the Orchestrator project in GitHub: https://github.com/github/orchestrator
 
@@ -9,7 +9,7 @@ To clone the project run:
 $ git clone https://github.com/github/orchestrator.git
 ```
 
-## 2- Building Orchestrator Docker Image
+## 2. Building Orchestrator Docker Image
 
 The Dockerfile is in the root of the cloned orchestrator project:
 ```
@@ -24,7 +24,7 @@ To check whether the image was built, run:
 $ docker images
 ```
 
-## 3- Creating Docker Network:
+## 3. Creating Docker Network:
 
 Let's create a Docker so we can specify the IPs from each node:
 ```
@@ -35,7 +35,7 @@ To check whether the network was created, run:
 $ docker network ls
 ```
 
-## 4- Orchestrator in a container
+## 4. Orchestrator in a container
 
 We will create a container with Orchestrator image, define its network and set its IP
 ```
@@ -43,7 +43,7 @@ $ docker run --name orchestrator --net orchnet --ip 172.20.0.10 -p 3000:3000 orc
 ```
 You will see the orchestrator start running.
 
-## 5- Replication Topology using MySQLs in containers
+## 5. Replication Topology using MySQLs in containers
 
 Let's set up a replication topology M→S1, M→S2. You just need to run the commands below:
 
@@ -97,7 +97,7 @@ docker exec -it node1 mysql -uroot -pmypass \
   -e "GRANT SUPER, PROCESS, REPLICATION SLAVE, RELOAD ON *.* TO 'orc_client_user'@'172.20.0.10';" \
   -e "GRANT SELECT ON mysql.slave_master_info TO 'orc_client_user'@'172.20.0.10';"
 ```
-## 6- Orchestrator commands: discover and topology
+## 6. Orchestrator commands: discover and topology
 
 Now it's time to run the commands in Orchestrator container so it can find the topology:
 
@@ -113,7 +113,7 @@ You can also see it accessing: http://localhost:3000
 
 ![alt text](https://github.com/wagnerjfr/orchestrator-mysql-replication-docker/blob/master/orchestrator.png)
 
-## 7- Clean up
+## 7. Clean up
 
 Stopping the containers:
 ```
