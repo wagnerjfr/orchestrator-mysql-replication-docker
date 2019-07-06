@@ -88,6 +88,8 @@ Checking whether slaves are replicating. ***Slave_IO_Running: Yes*** and ***Slav
 :
 ```
 $ docker exec -it node2 mysql -uroot -pmypass -e "SHOW SLAVE STATUS\G"
+```
+```
 $ docker exec -it node3 mysql -uroot -pmypass -e "SHOW SLAVE STATUS\G"
 ```
 Grant access to the Orchestrator so it can see the topology:
