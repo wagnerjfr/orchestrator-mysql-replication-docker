@@ -60,21 +60,21 @@ for N in 1 2 3
   --log-bin='mysql-bin-1.log'
 done
 ```
-To see whether the MySQL Containers are ready run:
+To see whether the MySQL Containers are ready, run:
 ```
 $ docker ps -a
 ```
 
-The MySQL containers must be with status (healthy) and NOT (health: starting) to go the next step.
+The MySQL containers must be with status **(healthy)** and **NOT** ***(health: starting)*** to go the next step.
 
-Setting master replication in node1:
+Setting master replication in **node1**:
 ```
 docker exec -it node1 mysql -uroot -pmypass \
   -e "CREATE USER 'repl'@'%' IDENTIFIED BY 'slavepass';" \
   -e "GRANT REPLICATION SLAVE ON *.* TO 'repl'@'%';" \
   -e "SHOW MASTER STATUS;"
 ```
-Setting slave replication on node2 and node3
+Setting slave replication on **node2** and **node3**:
 ```
 for N in 2 3
   do docker exec -it node$N mysql -uroot -pmypass \
@@ -114,7 +114,7 @@ $ docker exec -it orchestrator ./orchestrator -c topology -i 172.20.0.11:3306
 You can also see it accessing: http://localhost:3000
 
 ![alt text](https://github.com/wagnerjfr/orchestrator-mysql-replication-docker/blob/master/orchestrator.png)
-
+**
 ## 7. Clean up
 
 Stopping the containers:
