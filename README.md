@@ -24,7 +24,7 @@ To check whether the image was built, run:
 $ docker images
 ```
 
-## 3. Creating Docker Network:
+## 3. Creating a Docker Network:
 
 Let's create a Docker so we can specify the IPs from each node:
 ```
@@ -43,7 +43,7 @@ $ docker run --name orchestrator --net orchnet --ip 172.20.0.10 -p 3000:3000 orc
 ```
 You will see the orchestrator start running.
 
-## 5. Replication Topology using MySQLs in containers
+## 5. Replication Topology using MySQL in containers
 
 Let's set up a replication topology M→S1, M→S2. You just need to run the commands below:
 
