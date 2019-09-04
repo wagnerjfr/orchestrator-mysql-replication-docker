@@ -26,7 +26,7 @@ $ docker images
 
 ## 3. Creating a Docker Network:
 
-Let's create a Docker so we can specify the IPs from each node:
+Let's create a Docker network so we can specify the IPs from each node:
 ```
 $ docker network create --subnet=172.20.0.0/16 orchnet
 ```
