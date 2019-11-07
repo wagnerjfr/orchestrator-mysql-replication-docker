@@ -121,7 +121,7 @@ Stopping the containers:
 ```
 $ docker stop orchestrator node1 node2 node3
 ```
-Removing the stopped containers
+Removing the stopped containers:
 ```
 $ docker rm orchestrator node1 node2 node3
 ```
