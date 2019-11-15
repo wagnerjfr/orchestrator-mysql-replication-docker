@@ -52,7 +52,7 @@ Creating 3 MySQL servers in containers:
 for N in 1 2 3
   do docker run -d --name=node$N --hostname=node$N --net orchnet --ip "172.20.0.1$N" \
   -v $PWD/d$N:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=mypass \
-  mysql/mysql-server:5.7 \
+  mysql/mysql-server:8.0 \
   --server-id=$N \
   --enforce-gtid-consistency='ON' \
   --log-slave-updates='ON' \
@@ -70,7 +70,7 @@ The MySQL containers must be with status **(healthy)** and **NOT** ***(health: s
 Setting master replication in **node1**:
 ```
 docker exec -it node1 mysql -uroot -pmypass \
-  -e "CREATE USER 'repl'@'%' IDENTIFIED BY 'slavepass';" \
+  -e "CREATE USER 'repl'@'%' IDENTIFIED WITH mysql_native_password BY 'slavepass';" \
   -e "GRANT REPLICATION SLAVE ON *.* TO 'repl'@'%';" \
   -e "SHOW MASTER STATUS;"
 ```
