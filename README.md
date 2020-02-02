@@ -1,4 +1,4 @@
-# Orchestrator and Replication topology using Docker containers
+# Orchestrator and Replication topology with Docker containers
 
 ## 1. Cloning Orchestrator
 
