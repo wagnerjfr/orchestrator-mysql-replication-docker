@@ -115,17 +115,27 @@ You can also see it accessing: http://localhost:3000
 
 ![alt text](https://github.com/wagnerjfr/orchestrator-mysql-replication-docker/blob/master/orchestrator.png)
 **
-## 7. Clean up
+## 7. Cleannig up
 
-Stopping the containers:
+To stop and remove the containers:
+```
+$ docker rm -f orchestrator node1 node2 node3
+```
+
+**or**
+
+To stop the containers:
 ```
 $ docker stop orchestrator node1 node2 node3
 ```
-Removing the stopped containers:
+To remove the stopped containers:
 ```
 $ docker rm orchestrator node1 node2 node3
 ```
-Deleting data directories:
+
+**finally**
+
+To delete data directories:
 ```
 $ sudo rm -rf d1 d2 d3
 ```
